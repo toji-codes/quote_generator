@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tojis Quote Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: black;
+            height: 100vh;
+            margin:0;
+        }
+        p{
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }   
+
+        .container{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+
+        #quoteContainer{
+            margin: auto;
+        }
+
+        .seperationContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .myButton {
+            display: inline-block;
+            background-color:#000000;
+            border-radius:10px;
+            border:1px solid #ffffff;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:12px;
+            font-weight:bold;
+            padding:6px 24px;
+        }
+        #book{
+            display: inline-block;
+            background-color:#000000;
+            border-radius:10px;
+            border:1px solid #ffffff;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:12px;
+            font-weight:bold;
+            padding:5px 10px;
+        }
+
+        .versionsnummer{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .versionsnummer p{
+            font-size: 10px;
+            padding: 20px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="quoteContainer">
+            <p id="quote"></p>
+            <div class="selectorContainer">
+                <div class="seperationContainer">
+                    <button class="myButton" onclick="displayQuotes()">random</button>
+
+                    <label for="book"></label>
+                    <select name="book" id="book">
+                    <option value="stoizismus">Stoizismus</option>
+                    <option value="test">test</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="versionsnummer">
+           <p>1.12</p>
+        </div>
+    </div>
+
+<script>
+
+displayQuotes();
+setInterval(displayQuotes, 15000);
+
+function displayQuotes() {
+    idStoizismus = new Array()
+    idStoizismus [0] = "Seperation of Tasks"
+    idStoizismus [1] = "Don't Crave Regocnition"
+    idStoizismus [2] = "Ego Minimization"
+    idStoizismus [3] = "Don't Compare Success"
+    idStoizismus [4] = "Be In The Moment"
+    idStoizismus [5] = "Enjoy The Moment"
+    idStoizismus [6] = "Love Yourself"
+    idStoizismus [7] = "Will Worrying Change the Outcome"
+    idStoizismus [8] = "Ist das worüber du dir Sorgen machst die Wahrheit?"
+    idStoizismus [9] = "Stärke dein Urteilsvermögen"
+    idStoizismus [10] = "Was sind deine Absichten? Sind sie klar?"
+    idStoizismus [11] = "Alles hat eine zweite Interpretationsebene, nutze deinen Verstand"
+    idStoizismus [12] = "Zirkel der Macht : Wille, Verstand, Entscheidung"
+    idStoizismus [13] = "Tue nie etwas aus Gewohnheit, frage dich ob das nötig ist"
+    idStoizismus [14] = "Akzeptiere die Vergangenheit"
+    idStoizismus [15] = "Äußere Dinge lösen keine inneren Konflikte"
+    idStoizismus [16] = "Je mehr du dir wünscht desto mehr musst du tun. Fokussiere dich auf das Wichtige"
+    idStoizismus [17] = "Einfach machen ohne viel Nachdenken!"
+    idStoizismus [18] = "Stoizismus lindert deine Verletzlichkeit in der modernen Welt"
+    idStoizismus [19] = "Angst ist eine selbsterfüllende Prophezeiung"
+    idStoizismus [20] = "Geh deinen Weg und hab die Kraft für die Konflikte"
+    idStoizismus [21] = "Wut ist ein schlechter Antrieb, es ist selbstzerstörend"
+    idStoizismus [22] = "Jede Wut lässt dich ein Stück Leben verlieren"
+    idStoizismus [23] = "Aus einer Verlockung folgt immer eine langwierige Strafe"
+    idStoizismus [24] = "Erst denken, dann handeln"
+    idStoizismus [25] = "Was willst du wirklich?"
+    idStoizismus [26] = "Wach auf anstatt dir deinen Albtraum auszumalen"
+    idStoizismus [27] = "Lass dir nicht von Gefühlen deinen Weg versperren"
+    idStoizismus [28] = "Der Drang nach mehr ist der Feind deines Glücks"
+    idStoizismus [29] = "Mach dein Glück nicht abhängig von Ereignissen"
+    idStoizismus [30] = "Bring es zu Ende"
+    idStoizismus [31] = "Bleibe standhaft auch wenn du leidest"
+    idStoizismus [32] = "Mächtige Aufgaben, harte Kämpfe"
+    idStoizismus [33] = "Du bist bald dran, bleibe geduldig und diszipliniert."
+    idStoizismus [34] = "Du bist bald dran im Festbankett des Lebens"
+    idStoizismus [35] = "Harmlose kleine Sünden betrügen Menschen mit großem Herzen"
+    idStoizismus [36] = "Es ist der Wert einer Sache, der uns unterwürfig macht"
+    idStoizismus [37] = "Wenn es außerhalb deiner Macht ist, dann versucht es dich zu kontrollieren"
+    idStoizismus [38] = "Kontrollierst du deine Gefühle oder Sie dich?"
+    idStoizismus [39] = "Reden ist leicht, Handeln ist auch leicht - einfach machen"
+    idStoizismus [40] = "Den Äußeren Umständen sind unsere Gefühle egal"
+    idStoizismus [41] = "Gib Leuten nicht die Macht Ärger in dir zu provozieren"
+    idStoizismus [42] = "Leuten sind deine Gefühle völlig egal, warum sollte dich das bekümmern"
+    idStoizismus [43] = "Warum nimmst du alles so persönlich?"
+    idStoizismus [44] = "Verstehe, dass die meisten Menschen mit Gefühlen nicht umgehen können"
+    idStoizismus [45] = "Warum bekümmern dich Menschen, die dich nicht wertschätzen und denen deine Gefühle egal sind"
+    idStoizismus [46] = "Das einzige was dich aus der Fassung bringt ist deine Reaktion"
+    idStoizismus [47] = "Schätze selber ein was gut oder schlecht gemeint ist"
+    idStoizismus [48] = "Lass dich nicht von deinen Begierden, Gefühlen und Verbitterung verzehren"
+    idStoizismus [49] = "Jeder hat seine eigenen Vorstellungen und seine eigenen Vorhaben"
+    idStoizismus [50] = "Wann hat dir das letzte Mal, als du die Fassung verloren hast, was genützt"
+    idStoizismus [51] = "Wer die Selbstbeherrschung verliert hat eine unruhige Seele."
+    idStoizismus [52] = "Setze Prioritäten, was ist für dich wichtig gerade?"
+    idStoizismus [53] = "Nimmst du zu viele Bonbons aus dem Glas und kriegst deine Hand nicht mehr raus?"
+    idStoizismus [54] = "Lerne loszulassen"
+    idStoizismus [55] = "Wie viel brauchst du davon und brauchst du das wirklich?"
+    idStoizismus [56] = "Könntest du auch ohne damit leben?"
+    idStoizismus [57] = "Was wird passieren, wenn meine Wünsche und Verlangen nicht eintreten?"
+    idStoizismus [58] = "Unwichtige Dinge zu reduzieren wird dir helfen zu entspannen"
+    idStoizismus [59] = "Finde die goldene Mitte deiner Selbstbeurteilung. Überschätze und unterschätze dich nicht"
+    idStoizismus [60] = "Du kannst nicht Teil davon sein und auf der anderen Seite ein Teil des Ganzen sein. Entscheide dich"
+    idStoizismus [61] = "Welche Verpflichtungen sind tatsächlich notwendig und welche hast du dir auferlegt?"
+    idStoizismus [62] = "Alles hat Kosten. Welche Kosten sind sie für dich wert? Brauchst du es?"
+    idStoizismus [63] = "Nicht jeder wird sich über deine Höhepunkte freuen. Überlege gut, wann du darüber sprichst"
+    idStoizismus [64] = "Bleib realistisch und objektiv bei wichtigen Entscheidungen"
+    idStoizismus [65] = "Du schützt deinen Körper mehr als deinen Verstand"
+    idStoizismus [66] = "Du bist der Durchschnitt von den 5 engsten Menschen"
+    idStoizismus [67] = "Erschaffst du dir dein eigenes Gefängnis aus gold oder bist du frei?"
+    idStoizismus [68] = "Jeder denkt das Richtige zu tun. Würdest du vllt das Gleiche tun?"
+    idStoizismus [69] = "Eines Tages wird alles einen Sinn machen"
+    idStoizismus [70] = "Die Gegenwart ist alles was du besitzt und was zählt. Schätze sie, dann schätzt du Alles."
+    idStoizismus [71] = "Du hast du Macht dich und andere Leben zu verändern. Was kommt näher an einen Gott ran als das"
+    idStoizismus [72] = "Bist du Image oder Identität"
+    idStoizismus [73] = "Suchst du Zielscheiben, weil du dich selbst nicht verletzen willst?"
+    idStoizismus [74] = "Fast Money Poor Soul"
+    idStoizismus [75] = "Freiheit erlangst du nicht, indem du Wünsche erfüllst, sondern wenn du auf sie verzichtest"
+    idStoizismus [76] = "Wer bewacht die Wächter? Was ist dein Motiv?"
+    idStoizismus [77] = "Unnötige Dinge sind nichts wert, egal wie viel sie kosten"
+    idStoizismus [78] = "Lass dich nicht von deiner Motivationslosigkeit leiten."
+    idStoizismus [79] = "Sei diszipliniert, steht dir nicht selbst im Weg"
+    idStoizismus [80] = "Wir kaufen und machen Dinge, die wir nicht brauchen für Menschen, die wir nicht mögen"
+    idStoizismus [81] = "Dein Verstand formt sich nach dem was du regelmäßig denkst"
+    idStoizismus [82] = "Färbe deinen Verstand positiv"
+    idStoizismus [83] = "Gib Acht, worauf du dich einlässt"
+    idStoizismus [84] = "Nicht Alles was du dir im Moment wünschst ist auch etwas was du wirklich willst"
+    idStoizismus [85] = "Lass dir Erfolg nicht zu Kopf steigen"
+    idStoizismus [86] = "Die reine Vernunft muss uns anleiten, egal was für eine Glückssträhne wir haben"
+    idStoizismus [87] = "Vertrauen ist gut, Kontrolle ist besser"
+    idStoizismus [88] = "Der erste Eindruck ist öfters täuschend"
+    idStoizismus [89] = "Stelle Menschen auf die Probe, wenn sie was von dir wollen"
+    idStoizismus [90] = "Stelle nicht nur Menschen, sondern auch dich selbst in Frage"
+
+
+    idTest = new Array();
+    idTest[0] = "Test Broski1";
+    idTest[1] = "Test Broski2";
+
+    selectedBook = document.getElementById('book').value;
+    switch (selectedBook){
+        case 'stoizismus':
+        idQuote =  Array.from(idStoizismus);
+        break;
+        case  'test':
+        idQuote =  Array.from(idTest);
+        break;
+    }
+
+    current_quote = document.getElementById("quote").innerHTML
+    if (current_quote == '')
+    {
+        randomIndex = Math.floor(Math.random()*idQuote.length);
+        document.getElementById("quote").innerHTML = idQuote[randomIndex]; 
+    }
+    else{
+        current_quote_id = idQuote.indexOf(current_quote);
+        randomIndex = Math.floor(Math.random()*idQuote.length);
+        while (randomIndex == current_quote_id){
+            randomIndex = Math.floor(Math.random()*idQuote.length);
+        }
+        document.getElementById("quote").innerHTML = idQuote[randomIndex]; 
+    }
+}
+</script>
+
+</body>
+</html>
